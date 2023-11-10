@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpRequest, HttpResponsePermanentRedirect
 from .models import Product
+from django.views.generic import View
 
 def index(request):
     return render(request, 'index.html')
@@ -15,4 +16,9 @@ def delete_concrete_products(request:HttpRequest, id:int)->HttpResponse:
 def show_products(request):
     all_products = Product.objects.all()
     return render(request, "shop/products.html", context={'products':all_products})
+
+
+def Home_Page(View):
+    def post(self, *args, **kwargs):
+        return redirect("/products")
 
