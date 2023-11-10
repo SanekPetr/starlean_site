@@ -51,18 +51,18 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-12">
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
+                        <a href="{% url 'products/' %}" class="logo">
                             <img src="/static/assets/images/logo3.png">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#top" class="active">Домашняя страница</a></li>
-                            <li class="scroll-to-section"><a href="#men">Вся продукция</a></li>
+                            <li class="scroll-to-section"><a href="{% url 'products/all/' %}">Вся продукция</a></li>
                             <li class="submenu">
                                 <a href="javascript:;">Страницы</a>
                                 <ul>
-                                    <li><a href="products.html">Продукты</a></li>
+                                    <li><a href="{% url 'products/all/' %}">Продукты</a></li>
                                     <li><a href="contact.html">Связаться с нами</a></li>
                                 </ul>
                             </li>
@@ -326,20 +326,20 @@ https://templatemo.com/tm-571-hexashop
                 <div class="col-lg-3">
                     <h4>Шоппинг</h4>
                     <ul>
-                        <li><a href="#">Вся продукция</a></li>
+                        <li><a href="{% url 'products/all/' %}">Вся продукция</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3">
                     <h4>Нужные ссылки</h4>
                     <ul>
-                        <li><a href="#">Домашняя страница</a></li>
+                        <li><a href="{% url 'products/' %}">Домашняя страница</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-12">
                     <div class="under-footer">
                         <p>Copyright © 2023 StarLean Co., Ltd. All Rights Reserved.
-                        
+
 
 
                     </div>

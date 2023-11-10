@@ -22,3 +22,8 @@ def Home_Page(View):
     def post(self, *args, **kwargs):
         return redirect("/products")
 
+def All_Products(View):
+    def post(self, *args, **kwargs):
+        return redirect("/products/all/")
+
+
