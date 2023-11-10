@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<body>
+    <ul>
+        {% for product in products %}
+            {{product.name}} {{product.price}} {{product.quantity}} {{product.status.name}} <br>
+            {% for photo in product.photos.all %}
+                <img src="{{photo.image.url}}" width="200px" alt="" srcset="">
+            {%endfor%}<a href="/products/delete/{{product.id}}">Delete product</a> <br>
+        {% endfor %}
+    </ul>
+</body>
+</html>
