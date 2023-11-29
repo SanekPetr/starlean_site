@@ -19,12 +19,11 @@ from django.urls import path, re_path
 from products import views as products_view
 from persons import views as persons_view
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('persons/', persons_view.get_all),
     path('products/', products_view.show_all_products, name='products/'),
     path('products/delete/<int:id>', products_view.delete_concrete_products),
     path('products/all/', products_view.show_products, name='products/all/'),
-
-
 ]

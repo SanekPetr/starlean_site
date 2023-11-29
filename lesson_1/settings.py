@@ -21,6 +21,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-#r6)+hd#q5km!k6x&8zas=td233t$u^y2&0qfgb*t8ly-t!-k3'
+CART_SESSION_ID = 'cart'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
